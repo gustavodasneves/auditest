@@ -11,7 +11,7 @@ router.register(r'categorias', views.CategoriaViewSet)
 router.register(r'projetos', views.ProjetoViewSet)
 router.register(r'perguntas', views.PerguntaViewSet)
 router.register(r'questionarios', views.QuestionarioViewSet)
-router.register(r'categorias', views.CategoriaViewSet)
+
 
 
 

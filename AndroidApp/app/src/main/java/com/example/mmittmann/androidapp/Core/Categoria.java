@@ -1,5 +1,10 @@
 package com.example.mmittmann.androidapp.Core;
 
+import android.util.JsonReader;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -7,6 +12,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,17 +39,30 @@ public class Categoria {
         _httpContext = new BasicHttpContext();
     }
 
-    public List<Categoria> RetornarTodas() throws IOException {
+    public List<Categoria> RetornarTodas() throws IOException, JSONException {
 
         HttpGet httpGet = new HttpGet(OurSettings.UrlApi + "categorias");
-
+        _httpClient = new DefaultHttpClient();
         HttpResponse httpResponse = _httpClient.execute(httpGet, _httpContext);
 
         HttpEntity entity = httpResponse.getEntity();
 
-        String text = Util.getASCIIContentFromEntity(entity);
+        String jsonResult = Util.getASCIIContentFromEntity(entity);
 
-        return new ArrayList<Categoria>();
+        JSONTokener tokener = new JSONTokener(jsonResult);
+        JSONArray jsonArray = new JSONArray(tokener);
+
+        ArrayList<Categoria> categorias = new ArrayList<Categoria>();
+
+
+        for (int i=0; i<jsonArray.length(); i++) {
+            JSONObject obj = jsonArray.getJSONObject(i);
+            String name = obj.getString("name");
+            categorias.add(new Categoria());
+        }
+
+
+        return categorias;
     }
 
 
