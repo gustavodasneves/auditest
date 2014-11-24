@@ -2,46 +2,63 @@ package com.example.mmittmann.androidapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.mmittmann.androidapp.Core.Categoria;
+import com.example.mmittmann.androidapp.Core.CategoriaManager;
+import com.example.mmittmann.androidapp.Core.Model.Categoria;
+import com.example.mmittmann.androidapp.Core.OurHttpClient;
+import com.example.mmittmann.androidapp.Core.OurSettings;
 
+import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends Activity {
 
-    private Spinner spnCategorias;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Categoria categoria = new Categoria();
 
-        try {
-            List<Categoria> categorias = categoria.RetornarTodas();
+            new Thread(){
+                @Override
+                public void run(){
 
-            spnCategorias = (Spinner)findViewById(R.id.spnProjetos);
+                    CategoriaManager categoriaManager = new CategoriaManager(MainActivity.this);
+                    final Spinner spnCategorias;
+                    try {
 
-            ArrayAdapter<Categoria> dataAdapter = new ArrayAdapter<Categoria>(this,
-                    android.R.layout.simple_spinner_item, categorias);
-            dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spnCategorias.setAdapter(dataAdapter);
+                        List<Categoria> categorias = categoriaManager.RetornarTodas();
+
+                        spnCategorias = (Spinner)findViewById(R.id.spnProjetos);
+
+                        ArrayAdapter<Categoria> dataAdapter = new ArrayAdapter<Categoria>(MainActivity.this,
+                                android.R.layout.simple_spinner_item, categorias);
+                        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spnCategorias.setAdapter(dataAdapter);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }.start();
+
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
 

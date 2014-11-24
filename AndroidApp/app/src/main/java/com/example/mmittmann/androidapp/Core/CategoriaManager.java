@@ -1,7 +1,10 @@
 package com.example.mmittmann.androidapp.Core;
 
+import android.content.Context;
 import android.util.JsonReader;
+import android.util.Log;
 
+import com.example.mmittmann.androidapp.Core.Model.Categoria;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -24,61 +27,40 @@ import java.util.List;
 /**
  * Created by mmittmann on 20/11/14.
  */
-public class Categoria {
+public class CategoriaManager {
 
-    private int categoria_id;
-    private String nome;
+
 
     private HttpClient _httpClient = null;
     private HttpContext _httpContext = null;
+    private Context _ctx;
 
 
-
-    public Categoria(){
+    public CategoriaManager(Context ctx){
+        this._ctx = ctx;
         _httpClient = new DefaultHttpClient();
         _httpContext = new BasicHttpContext();
     }
 
     public List<Categoria> RetornarTodas() throws IOException, JSONException {
 
-        HttpGet httpGet = new HttpGet(OurSettings.UrlApi + "categorias");
-        _httpClient = new DefaultHttpClient();
-        HttpResponse httpResponse = _httpClient.execute(httpGet, _httpContext);
-
-        HttpEntity entity = httpResponse.getEntity();
-
-        String jsonResult = Util.getASCIIContentFromEntity(entity);
+        OurHttpClient ourHttpClient = new OurHttpClient();
+        String jsonResult = ourHttpClient.HttpGet(OurSettings.UrlApi + "categorias");
 
         JSONTokener tokener = new JSONTokener(jsonResult);
         JSONArray jsonArray = new JSONArray(tokener);
 
         ArrayList<Categoria> categorias = new ArrayList<Categoria>();
 
-
         for (int i=0; i<jsonArray.length(); i++) {
             JSONObject obj = jsonArray.getJSONObject(i);
-            String name = obj.getString("name");
-            categorias.add(new Categoria());
+            Categoria c = new Categoria();
+            c.setNome("Teste");
+            categorias.add(c);
         }
 
 
         return categorias;
     }
 
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getCategoria_id() {
-        return categoria_id;
-    }
-
-    public void setCategoria_id(int categoria_id) {
-        this.categoria_id = categoria_id;
-    }
 }
