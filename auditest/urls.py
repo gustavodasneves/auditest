@@ -13,10 +13,6 @@ router.register(r'perguntas', views.PerguntaViewSet)
 router.register(r'questionarios', views.QuestionarioViewSet)
 
 
-
-
-
-
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'auditest.views.home', name='home'),
