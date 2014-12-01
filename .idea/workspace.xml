@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="458f0a1f-29f1-446f-8250-578312ed227a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/serializers.py" afterPath="$PROJECT_DIR$/backend/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AppAuditest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0" vertical-offset="142" max-vertical-offset="731">
-              <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.5620567" vertical-offset="125" max-vertical-offset="714">
+              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63297874" vertical-offset="153" max-vertical-offset="799">
-              <caret line="31" column="15" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="15" />
+            <state vertical-scroll-proportion="-13.72" vertical-offset="184" max-vertical-offset="799">
+              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -890,14 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="142" max-vertical-offset="731">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="459">
@@ -908,8 +901,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63297874" vertical-offset="153" max-vertical-offset="799">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="15" />
+        <state vertical-scroll-proportion="-13.72" vertical-offset="184" max-vertical-offset="799">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5620567" vertical-offset="125" max-vertical-offset="714">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding />
         </state>
       </provider>

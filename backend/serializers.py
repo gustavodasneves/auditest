@@ -25,13 +25,12 @@ class QuestionarioSerializer(serializers.HyperlinkedModelSerializer):
 class RespostaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Resposta
-        fields = ('resposta_id', 'pergunta_id', 'usuario_id', 'valor_resposta', 'data_hora', )
+        fields = ('resposta_id', 'pergunta_id', 'valor_resposta', 'data_hora', )
 
 class QuestionarioPerguntaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = QuestionarioPergunta
         fields = ('questionario_id', 'pergunta_id',)
-
 
 
 
