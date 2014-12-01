@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="458f0a1f-29f1-446f-8250-578312ed227a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/MainActivity.java" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auditest/settings.py" afterPath="$PROJECT_DIR$/auditest/settings.py" />
-    </list>
+    <list default="true" id="458f0a1f-29f1-446f-8250-578312ed227a" name="Default" comment="" />
     <ignored path="AppAuditest.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/auditest/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.81914896" vertical-offset="1391" max-vertical-offset="1972">
-              <caret line="109" column="75" selection-start-line="109" selection-start-column="75" selection-end-line="109" selection-end-column="75" />
+              <caret line="109" column="61" selection-start-line="109" selection-start-column="61" selection-end-line="109" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -910,7 +907,7 @@
     <entry file="file://$PROJECT_DIR$/auditest/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81914896" vertical-offset="1391" max-vertical-offset="1972">
-          <caret line="109" column="75" selection-start-line="109" selection-start-column="75" selection-end-line="109" selection-end-column="75" />
+          <caret line="109" column="61" selection-start-line="109" selection-start-column="61" selection-end-line="109" selection-end-column="61" />
           <folding />
         </state>
       </provider>
