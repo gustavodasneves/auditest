@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="458f0a1f-29f1-446f-8250-578312ed227a" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Projetos\Faculdade\LPIV\Projeto-Final\AndroidApp\app\src\main\java\com\example\mmittmann\androidapp\Core\CategoriaManager.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/AsynHttpClient.java" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/AsynHttpClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/Model/Categoria.java" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/Model/Categoria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/MainActivity.java" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/OurHttpClient.java" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/OurHttpClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/OurSettings.java" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/java/com/example/mmittmann/androidapp/Core/OurSettings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidApp/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/AndroidApp/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auditest/urls.py" afterPath="$PROJECT_DIR$/auditest/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/serializers.py" afterPath="$PROJECT_DIR$/backend/serializers.py" />
     </list>
     <ignored path="AppAuditest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,18 +29,18 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.96" vertical-offset="142" max-vertical-offset="731">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="142" max-vertical-offset="731">
+              <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.6" vertical-offset="153" max-vertical-offset="799">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.63297874" vertical-offset="153" max-vertical-offset="799">
+              <caret line="31" column="15" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -95,6 +86,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="459">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/admin.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,20 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auditest/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45212767" vertical-offset="0" max-vertical-offset="564">
+            <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="527">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
@@ -156,6 +147,7 @@
         <option value="$PROJECT_DIR$/auditest/settings.py" />
         <option value="$PROJECT_DIR$/backend/models.py" />
         <option value="$PROJECT_DIR$/auditest/urls.py" />
+        <option value="$PROJECT_DIR$/backend/serializers.py" />
       </list>
     </option>
   </component>
@@ -832,26 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="459">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.96" vertical-offset="142" max-vertical-offset="731">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -904,21 +880,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6" vertical-offset="153" max-vertical-offset="799">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auditest/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45212767" vertical-offset="0" max-vertical-offset="564">
+        <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="527">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="142" max-vertical-offset="731">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="459">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63297874" vertical-offset="153" max-vertical-offset="799">
+          <caret line="31" column="15" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
