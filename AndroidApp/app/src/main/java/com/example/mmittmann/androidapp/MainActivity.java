@@ -11,15 +11,18 @@ import com.example.mmittmann.androidapp.Core.Managers.CategoriaManager;
 import com.example.mmittmann.androidapp.Core.Managers.PerguntaManager;
 import com.example.mmittmann.androidapp.Core.Managers.ProjetoManager;
 import com.example.mmittmann.androidapp.Core.Managers.QuestionarioManager;
+import com.example.mmittmann.androidapp.Core.Managers.RespostaManager;
 import com.example.mmittmann.androidapp.Core.Model.Categoria;
 import com.example.mmittmann.androidapp.Core.Model.Pergunta;
 import com.example.mmittmann.androidapp.Core.Model.Projeto;
 import com.example.mmittmann.androidapp.Core.Model.Questionario;
+import com.example.mmittmann.androidapp.Core.Model.Resposta;
 
 import org.json.JSONException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 
@@ -29,6 +32,16 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Resposta r = new Resposta();
+        r.setData_hora(new Date());
+        r.setResposta_id(1);
+        r.setValor_resposta("teteteteste");
+        Pergunta p = new Pergunta();
+        p.setPergunta_id(1);
+        r.setPergunta(p);
+        RespostaManager rm = new RespostaManager(this);
+        rm.inserirResposta(r);
 
                     QuestionarioManager questionarioManager = new QuestionarioManager(this);
 
