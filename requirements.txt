@@ -1,6 +1,5 @@
 Django==1.7.1
 MySQL-Connector-Python==2.0.1
-apsw==3.8.7
 ceODBC==2.0.1
 djangorestframework==2.4.4
 gunicorn==19.1.1
