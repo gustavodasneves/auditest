@@ -83,6 +83,28 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gustavoneves01',
+        'USER': 'gustavoneves01',
+        'PASSWORD': 'lp4123',
+        'HOST': 'mysql.gustavoneves.com',
+        'PORT': '3306',
+    }
+}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd1t7qmutn89epq',
+#         'USER': 'ixhtzjqyfqxguf',
+#         'PASSWORD': 'B0swwq3Fla7Tg2FBe70BO683P9',
+#         'HOST': 'ec2-54-243-42-236.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGINATE_BY': 10
