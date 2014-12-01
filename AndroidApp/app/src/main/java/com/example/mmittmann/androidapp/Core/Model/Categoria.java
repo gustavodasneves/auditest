@@ -22,4 +22,9 @@ public class Categoria {
     public void setCategoria_id(int categoria_id) {
         this.categoria_id = categoria_id;
     }
+
+    @Override
+    public String toString(){
+        return getNome();
+    }
 }

@@ -2,62 +2,54 @@ package com.example.mmittmann.androidapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.mmittmann.androidapp.Core.CategoriaManager;
+import com.example.mmittmann.androidapp.Core.Managers.CategoriaManager;
+import com.example.mmittmann.androidapp.Core.Managers.PerguntaManager;
+import com.example.mmittmann.androidapp.Core.Managers.ProjetoManager;
+import com.example.mmittmann.androidapp.Core.Managers.QuestionarioManager;
 import com.example.mmittmann.androidapp.Core.Model.Categoria;
-import com.example.mmittmann.androidapp.Core.OurHttpClient;
-import com.example.mmittmann.androidapp.Core.OurSettings;
+import com.example.mmittmann.androidapp.Core.Model.Pergunta;
+import com.example.mmittmann.androidapp.Core.Model.Projeto;
+import com.example.mmittmann.androidapp.Core.Model.Questionario;
 
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 
 public class MainActivity extends Activity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-            new Thread(){
-                @Override
-                public void run(){
+                    QuestionarioManager questionarioManager = new QuestionarioManager(this);
 
-                    CategoriaManager categoriaManager = new CategoriaManager(MainActivity.this);
-                    final Spinner spnCategorias;
-                    try {
+        ArrayList<Questionario> questionarios = new ArrayList<Questionario>();
+        try {
+            questionarios = questionarioManager.retornarQuestionarios();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-                        List<Categoria> categorias = categoriaManager.RetornarTodas();
+        Spinner spnCategorias = (Spinner)findViewById(R.id.spnProjetos);
 
-                        spnCategorias = (Spinner)findViewById(R.id.spnProjetos);
+         ArrayAdapter<Questionario> dataAdapter = new ArrayAdapter<Questionario>(this,
+                 android.R.layout.simple_spinner_item, questionarios);
+         //dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+         spnCategorias.setAdapter(dataAdapter);
 
-                        ArrayAdapter<Categoria> dataAdapter = new ArrayAdapter<Categoria>(MainActivity.this,
-                                android.R.layout.simple_spinner_item, categorias);
-                        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        spnCategorias.setAdapter(dataAdapter);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            }.start();
-
-
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
 
     }
 

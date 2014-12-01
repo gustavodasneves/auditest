@@ -9,12 +9,16 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class AsynHttpClient extends AsyncTask<String, String, Void> {
+import java.io.IOException;
+
+public class AsynHttpClient extends AsyncTask<String, Void, String> {
     Context context;
     public String result;
 
@@ -28,51 +32,40 @@ public class AsynHttpClient extends AsyncTask<String, String, Void> {
     }
 
     @Override
-    public Void doInBackground(String... params) {
-        String responseString="";
-        HttpClient client = null;
+    public String doInBackground(String... params) {
+     Log.i("Teste", "Chegou aqui");
+        HttpContext httpContext = new BasicHttpContext();
+        HttpGet httpGet = new HttpGet(params[0]);
+
+        Log.i("Teste", "Chegou aqui");
+
+
+        HttpClient _httpClient = new DefaultHttpClient();
+        HttpResponse httpResponse = null;
         try {
-            client = new DefaultHttpClient();
-            HttpGet get = new HttpGet(params[0]);
-            HttpResponse responseGet = client.execute(get);
-            HttpEntity resEntityGet = responseGet.getEntity();
-            if (resEntityGet != null) {
-                responseString = EntityUtils.toString(resEntityGet);
-                Log.i("GET RESPONSE", responseString.trim());
-            }
-        } catch (Exception e) {
-            Log.d("ANDRO_ASYNC_ERROR", "Error is "+e.toString());
+            httpResponse = _httpClient.execute(httpGet, httpContext);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        Log.d("ANDRO_ASYNC_RESPONSE", responseString.trim());
-        client.getConnectionManager().shutdown();
-        result = responseString.trim();
-        return null;
+
+        Log.i("Teste", "Executou a requisicao");
+
+        HttpEntity entity = httpResponse.getEntity();
+        String jsonResult = null;
+        try {
+            jsonResult = Util.getASCIIContentFromEntity(entity);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Log.i("Teste", jsonResult);
+
+        return jsonResult;
     }
 
 
-    protected void onPostExecute(Void v) {
-
-        //parse JSON data
-        try{
-            JSONArray jArray = new JSONArray(result);
-
-            for(int i=0; i < jArray.length(); i++) {
-
-                JSONObject jObject = jArray.getJSONObject(i);
-
-                String name = jObject.getString("name");
-                String tab1_text = jObject.getString("tab1_text");
-                int active = jObject.getInt("active");
-
-
-            }
-
-        } catch (JSONException e) {
-
-            Log.e("JSONException", "Error: " + e.toString());
-
-        } // catch (JSONException e)
-
+    protected void onPostExecute(String result) {
+        this.result = result;
 
     } // protected void onPostExecute(Void v)
 

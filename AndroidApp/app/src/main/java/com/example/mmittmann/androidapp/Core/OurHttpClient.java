@@ -20,7 +20,7 @@ public class OurHttpClient {
 
         Log.i("Teste", "Chegou aqui");
         HttpContext httpContext = new BasicHttpContext();
-        HttpGet httpGet = new HttpGet(OurSettings.UrlApi + "categorias");
+        HttpGet httpGet = new HttpGet(url);
         HttpClient _httpClient = new DefaultHttpClient();
 
         Log.i("Teste", "Chegou aqui");
@@ -34,7 +34,6 @@ public class OurHttpClient {
         String jsonResult = Util.getASCIIContentFromEntity(entity);
 
         Log.i("Teste", jsonResult);
-
 
         return jsonResult;
     }
